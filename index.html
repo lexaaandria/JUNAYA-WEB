@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JUNAYA BAKEHOUSE - Premium Italian Dessert & Artisan Bakery. Authentic tiramisu dibuat fresh setiap hari dengan resep Italia asli.">
+    <meta name="keywords" content="tiramisu, dessert, bakery, italian food, premium cake">
+    <title>JUNAYA BAKEHOUSE - Premium Italian Dessert & Artisan Bakery</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Music -->
+
+    <audio id="bgMusic" loop>
+    <source src="music/mui.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-toggle" onclick="toggleMusic()">
+    <i class="fas fa-music"></i>
+</button>
+
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+           <a href="#home" class="logo">
+    <img src="images/hero-logo.png" alt="Junaya Bakehouse Logo" class="logo-img">
+    <span>JUNAYA BAKEHOUSE</span>
+</a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#signature" class="nav-link">Signature</a></li>
+                    <li><a href="#order" class="nav-link">Order</a></li>
+                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                </ul>
+                <button class="nav-cta" onclick="scrollToOrder()">
+                    <span>Order Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+  <!-- HERO SECTION -->
+<section id="home" class="hero">
+    <!-- Background Image -->
+    <div class="hero-background-image">
+        <img src="images/Background-GPT.png" alt="Premium Tiramisu" class="hero-bg-img hero-bg-1">
+        <img src="images/Matcha-Order.png" alt="Matcha Missu" class="hero-bg-img hero-bg-2">
+        <img src="images/Brownis-Order.png" alt="Cookiez" class="hero-bg-img hero-bg-3">
+    </div>
+    
+    <!-- Background Layers -->
+    <div class="hero-background">
+        <div class="hero-gradient-overlay"></div>
+        <div class="hero-gradient-1"></div>
+        <div class="hero-gradient-2"></div>
+        <div class="hero-gradient-3"></div>
+        <div class="hero-blur-circle hero-blur-1"></div>
+        <div class="hero-blur-circle hero-blur-2"></div>
+        <div class="hero-blur-circle hero-blur-3"></div>
+        <div class="hero-mesh"></div>
+    </div>
+    
+    <!-- 👇 INI YANG HILANG DI CODE ANDA -->
+    <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-up">
+            <i class="fas fa-award"></i>
+            <span>Premium Quality Since 2010</span>
+        </div>
+        
+        <h1 class="hero-title">
+            <span class="hero-title-line" data-aos="fade-up" data-aos-delay="100">JUNAYA</span>
+            <span class="hero-title-line" data-aos="fade-up" data-aos-delay="200">BAKEHOUSE</span>
+        </h1>
+        
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+            Authentic Italian Tiramisu - Handcrafted Fresh Daily
+        </p>
+        
+        <div class="hero-description" data-aos="fade-up" data-aos-delay="400">
+            <p>Pengalaman rasa Italia autentik dengan resep tradisional dari Veneto, 
+            dibuat dengan bahan premium pilihan dan sentuhan master chef berpengalaman.</p>
+        </div>
+        
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+            <a href="#order" class="btn btn-primary btn-glow">
+                <span>Pesan Sekarang</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#menu" class="btn btn-secondary btn-glass">
+                <span>Lihat Menu</span>
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+        
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+            <div class="hero-stat">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <span class="stat-number">50K+</span>
+                <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="hero-stat">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="hero-stat">
+                <div class="stat-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Fresh Daily</span>
+            </div>
+        </div>
+    </div>  <!-- 👈 PENUTUP hero-content -->
+    
+    <div class="hero-scroll" data-aos="fade-up" data-aos-delay="700">
+        <span>Scroll to explore</span>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why Choose Us</span>
+                <h2 class="section-title">Premium Quality & Authentic Recipe</h2>
+                <p class="section-description">
+                    Kami berkomitmen menghadirkan dessert Italia terbaik dengan standar kualitas tertinggi
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3 class="feature-title">Authentic Italian</h3>
+                    <p class="feature-description">
+                        Resep tradisional dari Veneto, Italia dengan bahan impor premium pilihan
+                    </p>
+                    <div class="feature-detail">
+                        <span>Original Recipe</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire-burner"></i>
+                    </div>
+                    <h3 class="feature-title">Master Artisan</h3>
+                    <p class="feature-description">
+                        Dibuat oleh pastry chef tersertifikasi dengan pengalaman 20+ tahun
+                    </p>
+                    <div class="feature-detail">
+                        <span>Expert Craftsmanship</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Ingredients</h3>
+                    <p class="feature-description">
+                        Hanya menggunakan mascarpone terbaik, espresso premium, dan cocoa powder pilihan
+                    </p>
+                    <div class="feature-detail">
+                        <span>Finest Selection</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="feature-title">Fast Delivery</h3>
+                    <p class="feature-description">
+                        Pengiriman same-day dengan packaging temperature-controlled khusus
+                    </p>
+                    <div class="feature-detail">
+                        <span>Same Day Service</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="feature-title">100% Fresh</h3>
+                    <p class="feature-description">
+                        Dibuat fresh setiap hari, tanpa pengawet, disajikan dalam 24 jam
+                    </p>
+                    <div class="feature-detail">
+                        <span>No Preservatives</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="feature-title">Custom Orders</h3>
+                    <p class="feature-description">
+                        Personalisasi cake untuk acara spesial dan event khusus Anda
+                    </p>
+                    <div class="feature-detail">
+                        <span>Tailored for You</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+   <section id="gallery" class="gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Our Gallery</span>
+            <h2 class="section-title">Setiap Potong Dibuat dengan Cinta</h2>
+            <p class="section-description">
+                Lihat keindahan dan detail dari setiap kreasi kami
+            </p>
+        </div>
+
+        <div class="gallery-wrapper">
+            <div class="gallery-track">
+
+                <!-- ITEM 1 -->
+                <div class="gallery-item" data-aos="zoom-in">
+                    <div class="gallery-image">
+                        <img src="images/Tiramis-Black.png" alt="Classic Tiramisu">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h3>Classic Tiramisu</h3>
+                            <p>Original Italian Recipe</p>
+                            <button class="gallery-btn" onclick="viewImage('images/Tiramis-Black.png')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="gallery-item" data-aos="zoom-in">
+                    <div class="gallery-image">
+                        <img src="images/Matcha-black.png" alt="Matcha Missu">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h3>Matcha Missu</h3>
+                            <p>Belgian Chocolate</p>
+                            <button class="gallery-btn" onclick="viewImage('images/Matcha-black.jpeg')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="gallery-item" data-aos="zoom-in">
+                    <div class="gallery-image">
+                        <img src="images/Cookiez-Gemini.png" alt="Cookiez">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h3>Cookiez</h3>
+                            <p>Premium Uji Matcha</p>
+                            <button class="gallery-btn" onclick="viewImage('images/Cookiez-Gemini.png')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="gallery-item" data-aos="zoom-in">
+                    <div class="gallery-image">
+                        <img src="images/Brownies-Gemini.png" alt="Brownies">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <h3>Brownies</h3>
+                            <p>Fresh Young Coconut</p>
+                            <button class="gallery-btn" onclick="viewImage('images/Brownies-Gemini.png')">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- MODAL -->
+ <!-- SIZE SELECTION MODAL -->
+
+ <!-- SIZE SELECTION MODAL -->
+<!-- SIZE MODAL -->
+<div id="sizeModal" class="modal">
+    <div class="modal-overlay" onclick="closeSizeModal()"></div>
+    <div class="modal-content">
+        <h2 id="selectedProductName">Pilih Ukuran</h2>
+
+        <div class="size-options">
+            <div class="size-option" onclick="selectSize('small', this)">
+                <span class="size-label">Small</span>
+                <span class="size-price" id="smallPrice">Rp 0</span>
+            </div>
+
+            <div class="size-option" onclick="selectSize('medium', this)">
+                <span class="size-label">Medium</span>
+                <span class="size-price" id="mediumPrice">Rp 0</span>
+            </div>
+        </div>
+
+        <button class="modal-btn" onclick="confirmSize()">
+            <span>Lanjutkan Order</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</div>
+
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Menu</span>
+                <h2 class="section-title">Pilih Tiramisu Favoritmu</h2>
+                <p class="section-description">
+                    Setiap varian dibuat fresh dengan resep autentik dan bahan premium
+                </p>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="all">
+                    <span>All Menu</span>
+                </button>
+                <button class="menu-tab" data-category="classic">
+                    <span>Missu</span>
+                </button>
+                <button class="menu-tab" data-category="premium">
+                    <span>Cookiez & Brownies</span>
+                </button>
+                <button class="menu-tab" data-category="special">
+                    <span>Special Edition</span>
+                </button>
+            </div>
+            
+            <div class="menu-grid" id="menuGrid">
+                <div class="menu-card" data-category="classic" data-aos="fade-up">
+                    <div class="menu-badge">Bestseller</div>
+                    <div class="menu-image">
+                        <img src="images/Tiramis-Order.png" alt="Classic Tiramisu" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Classic Tiramisu</h3>
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="menu-description">
+                            Original resep Veneto dengan mascarpone premium, espresso bold.
+                        </p>
+                        <div class="menu-footer">
+                            <div class="menu-price">
+                                <span class="price-label">Mulai dari</span>
+                                <span class="price-amount">Rp 25.000</span>
+                            </div>
+                            <button class="menu-btn" onclick="showSizeModal('Classic Tiramisu', 25000, 35000)">
+    <span>Pilih Ukuran</span>
+    <i class="fas fa-arrow-right"></i>
+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card" data-category="classic" data-aos="fade-up" data-aos-delay="100">
+                    <div class="menu-badge premium">Premium</div>
+                    <div class="menu-image">
+                        <img src="images/Matcha-Order.png" alt="Matcha Missu" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Matcha Missu</h3>
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                        </div>
+                        <p class="menu-description">
+                            Lapisan cokelat Belgia premium dengan ganache intens dan cocoa dust berkualitas tinggi
+                        </p>
+                        <div class="menu-footer">
+                            <div class="menu-price">
+                                <span class="price-label">Mulai dari</span>
+                                <span class="price-amount">Rp 28.000</span>
+                            </div>
+                            <button class="menu-btn" onclick="showSizeModal('Matcha Missu', 28000, 40000)">
+    <span>Pilih Ukuran</span>
+    <i class="fas fa-arrow-right"></i>
+</button>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card" data-category="premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="menu-image">
+                        <img src="images/Brownis-Order.png" alt="Brownies" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Classic Brownies</h3>
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="menu-description">
+                            Brownies segar lokal dengan mascarpone lembut dan sentuhan rose yang elegan
+                        </p>
+                        <div class="menu-footer">
+                            <div class="menu-price">
+                                <span class="price-label">Mulai dari</span>
+                                <span class="price-amount">Rp 80.000</span>
+                            </div>
+                            <button class="menu-btn" onclick="addToCart('Brownies', 80000)">
+                                <span>Order</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card" data-category="premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="menu-badge premium">Premium</div>
+                    <div class="menu-image">
+                        <img src="images/Cookiez-Gemini.png" alt="Cookiez" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Cookiez</h3>
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="menu-description">
+                            Premium Uji matcha dari Jepang bertemu dengan tradisi Italia yang sempurna
+                        </p>
+                        <div class="menu-footer">
+                            <div class="menu-price">
+                                <span class="price-label">Mulai dari</span>
+                                <span class="price-amount">Rp 450.000</span>
+                            </div>
+                            <button class="menu-btn" onclick="addToCart('Cookiez', 450000)">
+                                <span>Order</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card" data-category="special" data-aos="fade-up" data-aos-delay="400">
+                    <div class="menu-badge special">Special</div>
+                    <div class="menu-image">
+                        <img src="images/hero-logo.png" alt="Coconut Paradise" loading="lazy">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Comming soon</h3>
+                            <div class="menu-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="menu-description">
+                            Kelapa muda asli dengan cream vanilla yang dreamy dan tekstur sempurna
+                        </p>
+                        <div class="menu-footer">
+                            <div class="menu-price">
+                                <span class="price-label">Mulai dari</span>
+                                <span class="price-amount">Rp xxxxx</span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+              
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE SECTION -->
+    <section id="signature" class="signature-section">
+        <div class="container">
+            <div class="signature-content">
+                <div class="signature-visual" data-aos="fade-right">
+                    <div class="signature-image-wrapper">
+                        <div class="signature-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Award Winning</span>
+                        </div>
+                        <div class="signature-pattern"></div>
+                    </div>
+                </div>
+                
+                <div class="signature-text" data-aos="fade-left">
+                    <span class="section-badge">Our Signature</span>
+                    <h2 class="section-title">Resep Warisan Turun Temurun</h2>
+                    <div class="signature-description">
+                        <p>
+                            Resep tiramisu signature kami adalah rahasia yang dijaga ketat, 
+                            menggabungkan teknik tradisional Italia dengan inovasi modern yang sempurna.
+                        </p>
+                        <p>
+                            Setiap layer dibuat dengan teliti untuk mencapai keseimbangan rasa yang ideal - 
+                            espresso yang bold, kelembutan mascarpone yang pas, dan hint cocoa premium yang elegan.
+                        </p>
+                    </div>
+                    
+                    <div class="signature-features">
+                        <div class="signature-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Imported Italian Mascarpone</h4>
+                                <p>Langsung dari Italia untuk tekstur sempurna</p>
+                            </div>
+                        </div>
+                        
+                        <div class="signature-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Single-Origin Arabica Espresso</h4>
+                                <p>Kopi pilihan dengan karakter bold yang khas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="signature-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Belgian Dark Cocoa Powder</h4>
+                                <p>Cocoa premium untuk finishing sempurna</p>
+                            </div>
+                        </div>
+                        
+                        <div class="signature-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Organic Free-Range Eggs</h4>
+                                <p>Telur organik untuk kualitas terbaik</p>
+                            </div>
+                        </div>
+                        
+                        <div class="signature-feature">
+                            <div class="feature-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-info">
+                                <h4>Marsala Wine from Sicily</h4>
+                                <p>Wine autentik untuk rasa khas Italia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="signature-actions">
+                        <button class="btn btn-primary" onclick="scrollToOrder()">
+                            <span>Order Signature</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <a href="#menu" class="btn btn-text">
+                            <span>Lihat Semua Menu</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER SECTION -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Place Order</span>
+                <h2 class="section-title">Pesan Tiramisu Premium Anda</h2>
+                <p class="section-description">
+                    Fresh tiramisu delivered dengan packaging premium langsung ke pintu Anda
+                </p>
+            </div>
+            
+            
+            <!-- TAMBAHKAN KODE INI DI SINI -->
+            <div class="order-contact-info">
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>WhatsApp Order</h3>
+                        <p>Chat langsung untuk order cepat</p>
+                        <a href="https://wa.me/62895325720423" target="_blank" class="contact-link">
+                            +62 895-3257-20423
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email Order</h3>
+                        <p>Kirim detail pesanan via email</p>
+                        <a href="mailto:thisisagung1@gmail.com" class="contact-link">
+                            thisisagung1@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- SAMPAI SINI -->
+            
+          
+            <div class="order-wrapper">
+                <form class="order-form" id="orderForm">
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-user"></i>
+                            Informasi Personal
+                        </h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+62 812-3456-7890">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-location-dot"></i>
+                            Alamat Pengiriman
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="address">Full Address *</label>
+                            <textarea id="address" name="address" rows="3" required placeholder="Jl. Contoh No. 123, Jakarta"></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" required placeholder="Jakarta">
+                            </div>
+                            <div class="form-group">
+                                <label for="postalCode">Postal Code *</label>
+                                <input type="text" id="postalCode" name="postalCode" required placeholder="12345">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <i class="fas fa-shopping-bag"></i>
+                            Detail Pesanan
+                        </h3>
+                        
+                        <div class="form-group">
+                            <label for="productSelect">Select Product *</label>
+                           <select id="productSelect">
+                            <option id="optTiramisu" data-product="classic tiramisu" value="350000">
+                            Classic Tiramisu - Rp 350.000
+                            </option>
+
+                            <option id="optMatcha" data-product="matcha missu" value="420000">
+                            Matcha Missu - Rp 420.000
+                            </option>
+
+                            <option id="optBrownies" data-product="classic brownies" value="390000">
+                            Classic Brownies - Rp 80.000
+                            </option>
+
+                            <option id="optCookiez" data-product="classic cookiez" value="390000">
+                            Classic Cookiez - Rp 90.000
+                            </option>
+
+                            </select>
+
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <div class="quantity-selector">
+                                <button type="button" class="quantity-btn quantity-decrease" onclick="changeQuantity(-1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="quantity-display" id="quantity">1</span>
+                                <button type="button" class="quantity-btn quantity-increase" onclick="changeQuantity(1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <!-- Pilihan Delivery / Pickup -->
+<div class="form-group">
+    <label>Delivery Methods <span class="required">*</span></label>
+    <div class="radio-group">
+        <label class="radio-label">
+            <input type="radio" name="deliveryMethod" value="delivery" checked>
+            <span class="radio-custom"></span>
+            Home Delivery (+ Rp 50,000)
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="deliveryMethod" value="pickup">
+            <span class="radio-custom"></span>
+            <strong>Pick Up at Store (FREE SHIPPING)</strong>
+        </label>
+    </div>
+</div>
+                            <label for="deliveryDate">Delivery Date *</label>
+                            <input type="date" id="deliveryDate" name="deliveryDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="specialInstructions">Special Instructions (Optional)</label>
+                            <textarea id="specialInstructions" name="specialInstructions" rows="3" placeholder="Any special requests or dietary restrictions"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary">
+                        <h3 class="summary-title">Order Summary</h3>
+                        <div class="summary-items">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">Rp 350.000</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee:</span>
+                                <span id="delivery">Rp 50.000</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax (10%):</span>
+                                <span id="tax">Rp 35.000</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="total">Rp 435.000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  <button type="submit" class="submit-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Order via WhatsApp</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    
+                    <button type="button" class="submit-btn submit-btn-secondary" onclick="sendViaEmail()">
+                        <i class="fas fa-envelope"></i>
+                        <span>Order via Email</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+                <p class="section-description">
+                    Ribuan pelanggan puas telah merasakan kualitas premium kami
+                </p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Absolutely the best tiramisu I've ever had! The perfect balance of coffee and cream. Tastes just like the one I had in Rome!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Alexandriaaaa</h4>
+                            <p>Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "Ordered for my wife's birthday and she was blown away! The presentation was beautiful and delivery was right on time."
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <h4>Jungramaaa</h4>
+                            <p>Bali</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                        "The Cookiez is incredible! Such a unique twist on the classic. Can't wait to try more flavors!"
+                    </p>
+                    <div class="review-author">
+                        <div class="author-avatar">KC</div>
+                        <div class="author-info">
+                            <h4>Kurt Cobain</h4>
+                            <p>Surabaya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Achievements</span>
+                <h2 class="section-title">Dipercaya oleh Ribuan Pelanggan</h2>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-label">Happy Customers</div>
+                    <p class="stat-description">Pelanggan puas di seluruh Indonesia</p>
+                </div>
+                
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Years Experience</div>
+                    <p class="stat-description">Pengalaman membuat dessert premium</p>
+                </div>
+                
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Awards Won</div>
+                    <p class="stat-description">Penghargaan kuliner internasional</p>
+                </div>
+                
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Daily Orders</div>
+                    <p class="stat-description">Pesanan fresh setiap harinya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">Pertanyaan yang Sering Ditanyakan</h2>
+                <p class="section-description">
+                    Temukan jawaban untuk pertanyaan umum seputar produk dan layanan kami
+                </p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does tiramisu last?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Our tiramisu stays fresh for 3-4 days when properly refrigerated. We recommend consuming within 48 hours for the best taste and texture.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you deliver nationwide?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! We offer nationwide delivery with special temperature-controlled packaging to ensure your tiramisu arrives fresh and perfect.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I customize my order?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! We offer custom orders for special occasions. Contact us directly to discuss your requirements.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there alcohol in your tiramisu?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Traditional tiramisu contains Marsala wine. We also offer alcohol-free versions upon request.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are your payment options?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We accept all major credit cards, bank transfers, and popular digital wallets like GoPay, OVO, and Dana.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <span class="section-badge">Newsletter</span>
+                    <h2 class="section-title">Stay Updated</h2>
+                    <p class="section-description">
+                        Subscribe untuk mendapatkan special offers dan update menu terbaru
+                    </p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                    <button type="submit" class="newsletter-btn">
+                        <span>Subscribe</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Junaya Bakehouse</h3>
+                    <p class="footer-description">
+                        Premium Italian desserts crafted with passion and tradition. Bringing the authentic taste of Italy to your door.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                       <a 
+  href="https://www.instagram.com/junayabakehouse/" 
+  class="social-link" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+    <i class="fab fa-instagram"></i>
+</a>
+
+                            <a 
+  href="https://wa.me/62895325720423" 
+  class="social-link" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+    <i class="fab fa-whatsapp"></i>
+</a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#order">Order Now</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+62 812-3456-7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@junayabakehouse.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Denpasar, Indonesia</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Open Daily 09.00 - 21.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2025</span> Junaya Bakehouse. All rights reserved. Made with ❤️ for dessert lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- SUCCESS MODAL -->
+     
+    <div class="modal" id="successModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Successful!</h2>
+            <p>Thank you for your order. We'll send you a confirmation email shortly.</p>
+            <button class="modal-btn" onclick="closeModal()">
+                <span>Close</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".gallery-track");
+    const items = document.querySelectorAll(".gallery-item");
+
+    if (!track || !items.length) return;
+
+    function updateActiveItem() {
+        const trackCenter = track.scrollLeft + track.offsetWidth / 2;
+
+        items.forEach(item => {
+            const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+            const isActive = Math.abs(trackCenter - itemCenter) < item.offsetWidth / 2;
+
+            item.classList.toggle("is-active", isActive);
+        });
+    }
+
+    track.addEventListener("scroll", () => {
+        requestAnimationFrame(updateActiveItem);
+    });
+
+    // 🔥 INIT PERTAMA KALI
+    updateActiveItem();
+});
+</script>
+
+</body>
+</html>
