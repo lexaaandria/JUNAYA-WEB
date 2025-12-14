@@ -28,6 +28,16 @@
     <i class="fas fa-music"></i>
 </button>
 
+<!-- WELCOME INTRO -->
+<div id="welcomeScreen">
+    <div class="welcome-title">
+        <span class="welcome-line">JUNAYA</span>
+        <span class="welcome-line">BAKEHOUSE</span>
+    </div>
+</div>
+
+
+
 
     <!-- NAVIGATION -->
     <nav id="navbar" class="navbar">
@@ -293,7 +303,8 @@
                     <div class="gallery-overlay">
                         <div class="gallery-content">
                             <h3>Cookiez</h3>
-                            <p>Premium Uji Matcha</p>
+                            <p>Soft baked cookies with premium ingredients and bold flavor</p>
+
                             <button class="gallery-btn" onclick="viewImage('images/Cookiez-Gemini.png')">
                                 <i class="fas fa-expand"></i>
                             </button>
@@ -309,7 +320,8 @@
                     <div class="gallery-overlay">
                         <div class="gallery-content">
                             <h3>Brownies</h3>
-                            <p>Fresh Young Coconut</p>
+                            <p>Rich chocolate brownies with a moist, fudgy texture</p>
+
                             <button class="gallery-btn" onclick="viewImage('images/Brownies-Gemini.png')">
                                 <i class="fas fa-expand"></i>
                             </button>
@@ -355,8 +367,8 @@
         </div>
 
         <button class="modal-btn" onclick="confirmSize()">
-            <span>Lanjutkan Order</span>
-            <i class="fas fa-arrow-right"></i>
+            <span>Lanjutkan Order </span>
+            <!-- <i class="fas fa-arrow-right"></i> -->
         </button>
     </div>
 </div>
@@ -411,7 +423,7 @@
                                 <span class="price-amount">Rp 25.000</span>
                             </div>
                             <button class="menu-btn" onclick="showSizeModal('Classic Tiramisu', 25000, 35000)">
-    <span>Pilih Ukuran</span>
+    <span>Order </span>
     <i class="fas fa-arrow-right"></i>
 </button>
                         </div>
@@ -440,7 +452,7 @@
                                 <span class="price-amount">Rp 28.000</span>
                             </div>
                             <button class="menu-btn" onclick="showSizeModal('Matcha Missu', 28000, 40000)">
-    <span>Pilih Ukuran</span>
+    <span>Order </span>
     <i class="fas fa-arrow-right"></i>
 </button>
 
@@ -734,28 +746,41 @@
                             Detail Pesanan
                         </h3>
                         
-                        <div class="form-group">
-                            <label for="productSelect">Select Product *</label>
-                           <select id="productSelect">
-                            <option id="optTiramisu" data-product="classic tiramisu" value="350000">
-                            Classic Tiramisu - Rp 350.000
-                            </option>
+                       <div class="form-group">
+    <label for="productSelect">Select Product *</label>
+    <select id="productSelect" name="product" required>
+        <option value="" disabled selected>
+            Pilih menu favoritmu
+        </option>
 
-                            <option id="optMatcha" data-product="matcha missu" value="420000">
-                            Matcha Missu - Rp 420.000
-                            </option>
+        <!-- CLASSIC TIRAMISU -->
+        <option value="25000" data-name="Classic Tiramisu" data-size="Small">
+            Classic Tiramisu (Small) - Rp 25.000
+        </option>
+        <option value="35000" data-name="Classic Tiramisu" data-size="Medium">
+            Classic Tiramisu (Medium) - Rp 35.000
+        </option>
 
-                            <option id="optBrownies" data-product="classic brownies" value="390000">
-                            Classic Brownies - Rp 80.000
-                            </option>
+        <!-- MATCHA MISSU -->
+        <option value="28000" data-name="Matcha Missu" data-size="Small">
+            Matcha Missu (Small) - Rp 28.000
+        </option>
+        <option value="40000" data-name="Matcha Missu" data-size="Medium">
+            Matcha Missu (Medium) - Rp 40.000
+        </option>
 
-                            <option id="optCookiez" data-product="classic cookiez" value="390000">
-                            Classic Cookiez - Rp 90.000
-                            </option>
+        <!-- OTHERS -->
+        <option value="80000" data-name="Classic Brownies">
+            Classic Brownies - Rp 80.000
+        </option>
+        <option value="90000" data-name="Classic Cookiez">
+            Classic Cookiez - Rp 90.000
+        </option>
+    </select>
+</div>
 
-                            </select>
 
-                        </div>
+
                         
                         <div class="form-group">
                             <label for="quantity">Quantity</label>
