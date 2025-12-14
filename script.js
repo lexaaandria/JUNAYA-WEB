@@ -8,7 +8,12 @@
 // ==========================================
 let quantity = 1;
 // let selectedProduct = { name: 'Classic Tiramisu', price: 350000 };
-let selectedProduct = { name: '', price: 0 };
+let selectedProduct = { 
+    name: '', 
+    size: '', 
+    price: 0 
+};
+
 
 let cart = [];
 let isMenuOpen = false;
@@ -97,13 +102,18 @@ function setupEventListeners() {
     // Product select change
     const productSelect = document.getElementById('productSelect');
     if (productSelect) {
-        productSelect.addEventListener('change', function() {
-            const selectedOption = this.options[this.selectedIndex];
-            const productName = selectedOption.text.split(' - ')[0];
-            const price = parseInt(this.value);
-            selectedProduct = { name: productName, price: price };
-            updatePrice();
-        });
+        productSelect.addEventListener('change', function () {
+        const option = this.options[this.selectedIndex];
+
+        selectedProduct = {
+        name: option.dataset.name || '',
+        size: option.dataset.size || '',
+        price: parseInt(option.value) || 0
+    };
+
+        updatePrice();
+});
+
     }
         // === TOMBOL DELIVERY / PICKUP (WAJIB ADA DI SINI) ===
     const deliveryRadios = document.querySelectorAll('input[name="deliveryMethod"]');
@@ -127,7 +137,8 @@ function setupEventListeners() {
     // Scroll to top button
     setupScrollToTop();
 
-    
+    setupProductPicker();
+
     
     // Window resize handler
     window.addEventListener('resize', debounce(handleResize, 250));
@@ -415,29 +426,33 @@ function changeQuantity(change) {
 // UPDATE SUMMARY //
 //               //
 
-function updateOrderSummary(productName, price) {
-    selectedProduct.name = productName;
-    selectedProduct.price = price;
 
+function updateOrderSummary(productName, price, size = '') {
     const productSelect = document.getElementById('productSelect');
     if (!productSelect) return;
 
-    let option = Array.from(productSelect.options).find(opt =>
-        opt.dataset.product === productName.toLowerCase()
+    const option = Array.from(productSelect.options).find(opt =>
+        opt.dataset.name === productName &&
+        (size ? opt.dataset.size === size : !opt.dataset.size)
     );
 
     if (!option) {
-        option = document.createElement('option');
-        option.dataset.product = productName.toLowerCase();
-        productSelect.appendChild(option);
+        console.warn('Option not found:', productName, size);
+        return;
     }
 
-    option.value = price;
-    option.text = `${productName} - ${formatCurrency(price)}`;
-    productSelect.value = price.toString();
+    productSelect.value = option.value;
+
+    selectedProduct = {
+        name: productName,
+        size: size,
+        price: price
+    };
 
     updatePrice();
 }
+
+
 
 //
 //
@@ -520,8 +535,11 @@ function handleOrderSubmit(e) {
     const formData = new FormData(e.target);
     const productSelect = document.getElementById('productSelect');
     const selectedOption = productSelect.options[productSelect.selectedIndex];
-    const productName = selectedOption.text.split(' - ')[0];
-    
+    //const productName = selectedOption.text.split(' - ')[0];
+    const productName = selectedOption.dataset.size
+    ? `${selectedOption.dataset.name} (${selectedOption.dataset.size})`
+    : selectedOption.dataset.name;
+
     const deliveryMethod = formData.get('deliveryMethod');
     const deliveryFee = deliveryMethod === 'delivery' ? 50000 : 0;
 
@@ -1002,6 +1020,8 @@ function handleResize() {
     }
 }
 
+
+
 // ==========================================
 // PERFORMANCE OPTIMIZATION
 // ==========================================
@@ -1084,16 +1104,78 @@ function selectSize(size, element) {
     element.classList.add('active');
 }
 
+        
+    function setupProductPicker() {
+    const pickerTrigger = document.querySelector(".picker-trigger");
+    const productPicker = document.querySelector(".product-picker");
+    const cards = document.querySelectorAll(".product-card");
+    const productSelect = document.getElementById("productSelect");
+
+    pickerTrigger?.addEventListener("click", () => {
+        productPicker.classList.toggle("show");
+    });
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            const name = card.dataset.name;
+            const size = card.dataset.size || '';
+            const price = parseInt(card.dataset.price) || 0;
+
+            cards.forEach(c => c.classList.remove("active"));
+            card.classList.add("active");
+
+            updateOrderSummary(name, price, size);
+
+            productPicker.classList.remove("show");
+            showNotification(`${name}${size ? ' (' + size + ')' : ''} dipilih ✨`);
+        });
+    });
+ 
+}
+
+
+
 function confirmSize() {
     closeSizeModal();
 
-    const finalName = `${currentProductName} (${selectedSize.toUpperCase()})`;
-    updateOrderSummary(finalName, selectedSizePrice);
+    const sizeLabel = selectedSize === 'small' ? 'Small' : 'Medium';
+
+    updateOrderSummary(
+        currentProductName,
+        selectedSizePrice,
+        sizeLabel
+    );
 
     scrollToOrder();
-    showNotification(`Ukuran ${selectedSize.toUpperCase()} dipilih untuk ${currentProductName}!`);
+    showNotification(
+        `Ukuran ${sizeLabel} dipilih untuk ${currentProductName}!`
+    );
 }
 
+
+// ==========================================
+// WELCOME INTRO SCREEN
+// ==========================================
+window.addEventListener('load', () => {
+    const welcome = document.getElementById('welcomeScreen');
+    if (!welcome) return;
+
+    // tahan sebentar biar kebaca
+    setTimeout(() => {
+        welcome.classList.add('merge');
+    }, 1600);
+
+    // background ikut hilang
+    setTimeout(() => {
+        welcome.style.opacity = '0';
+        welcome.style.visibility = 'hidden';
+    }, 2400);
+
+    // bersihin DOM
+    setTimeout(() => {
+        welcome.remove();
+    }, 3600);
+});
 
 
 // ==========================================
